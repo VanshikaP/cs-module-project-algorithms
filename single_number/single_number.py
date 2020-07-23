@@ -4,8 +4,12 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    uniques = (len(arr) // 2) + 1
+    arr1 = [0] * uniques
+    arr2 = [item for item in arr]
+    
+    for i in range(len(arr)):
+        
 
 
 if __name__ == '__main__':
