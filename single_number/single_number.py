@@ -4,12 +4,21 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-    uniques = (len(arr) // 2) + 1
-    arr1 = [0] * uniques
-    arr2 = [item for item in arr]
+    # dictionary for counts
+    counts = {}
+
+    # add item counts
+    for item in arr:
+        if item in counts:
+            counts[item] += 1
+        else:
+            counts[item] = 1
     
-    for i in range(len(arr)):
-        
+    # find item with count 1
+    for item, val in counts.items():
+        if val is 1:
+            return item
+
 
 
 if __name__ == '__main__':
