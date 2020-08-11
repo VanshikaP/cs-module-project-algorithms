@@ -4,8 +4,21 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # dictionary for counts
+    counts = {}
 
-    pass
+    # add item counts
+    for item in arr:
+        if item in counts:
+            counts[item] += 1
+        else:
+            counts[item] = 1
+    
+    # find item with count 1
+    for item, val in counts.items():
+        if val is 1:
+            return item
+
 
 
 if __name__ == '__main__':
